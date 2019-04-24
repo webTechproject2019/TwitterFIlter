@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="piechart"></div>
+<title> Live Server </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    </head>
+    <body>
+        <div class="piechart">
+            <div class="row">
+                <div class="col-sm-6- col-md-6">
+                    <div id="trends"></div>
+                </div>
+                <div class="col-sm-6- col-md-6"></div>
+                <div class="col-sm-6- col-md-6"></div>
+                <div class="col-sm-6- col-md-6"></div>
+            </div>
+        </div>
+        <p id = "demo"> </p>
+        <script type="text/javascript">
+
+Highcharts.chart('piechart', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Top 5 Trending Hashtags for April 21st, 2019'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.y}k</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.y}k',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'trends',
+        colorByPoint: true,
+        data: [{
+            name: '#GameofThrones',
+            y: 1680,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Arya',
+            y: 808
+        }]
+    }]
+});
+</script>
+</body>
+</html>

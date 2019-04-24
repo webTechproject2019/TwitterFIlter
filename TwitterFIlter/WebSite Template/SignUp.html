@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.9.7, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="Web Builder Description">
+  
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="header15 cid-ro7Xli1jhm mbr-fullscreen" id="header15-7">
+{% extends "templates/Index.html" %}
+
+
+{% from "https://mobirise.com/" import render_field %}
+    
+
+    <div class="container align-right">
+        <div class="row">
+            <div class="mbr-white col-lg-8 col-md-7 content-container">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
+                    Sign Up!</h1>
+                
+            </div>
+            <div class="col-lg-4 col-md-5">
+                <div class="form-container">
+                    <div class="media-container-column" data-form-type="formoid">
+                        <!---Formbuilder Form--->
+                        <form action="/register" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form" enctype="multipart/form-data"> 
+                          <input type="hidden" name="_csrf_token" data-form-email="true" value="eoVFBrV6zl9y3d9Fr4zPYLlvT7hPFstbNrFmrGgDBxpoixH6u3W4/4k98UBrBlRA/HqpUnoTPoqIktct42nZytveFRFI7kLud8ifSzSEvnXxUFVbyPAODO2ez3RXzxIu">
+                            <div class="row">
+                                <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Sign Up Complete!</div>
+                                <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                </div>
+                            </div>
+                            <div class="dragArea row">
+                                <div class="col-md-12 form-group " data-for="name">
+                                    <input type="text" name="name" placeholder="Name" data-form-field="Name" required="required" class="form-control px-3 display-7" id="name-header15-7">
+                                </div>
+                                <div class="col-md-12 form-group " data-for="username">
+                                    <input type="text" name="username" placeholder= "Username" data-form-field="Username" required="required" class="form-control px-3 display-7" id="text-header15-7">
+                                </div>
+                              
+                              <div class="col-md-12 form-group " data-for="email">
+                                    <input type="email" name="email" placeholder= "Email" data-form-field="email" required="required" class="form-control px-3 display-7" id="email-header15-7">
+                                </div>
+                              
+                                <div data-for="location" class="col-md-12 form-group ">
+                                    <input type="text" name="location" placeholder="" data-form-field="Location" class="form-control px-3 display-7" id="location-header15-7">
+                                </div>
+                              
+                              <div data-for="Password" class="col-md-12 form-group ">
+                                    <input type="Password" name="password" placeholder="" data-form-field="Password" class="form-control px-3 display-7" id="Password-header15-7">
+                                </div>
+                              
+                              <div data-for="confirm" class="col-md-12 form-group ">
+                                    <input type="Password" name="confirm_password" placeholder="" data-form-field="confirm" class="form-control px-3 display-7" id="confirm-header15-7">
+                                </div>
+                                
+                                <div class="col-md-12 input-group-btn"><button type="submit" class="btn btn-form btn-success display-4" onclick="window.location.href = 'HomeFolder/index.html';">Sign Up</button></div>
+                            </div>
+                        </form><!---Formbuilder Form--->
+                        {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                            {% for message in messages %}
+                              <div class="text-center">
+                                <div class="alert alert-danger" role="alert">
+                                  {{ message }}
+                                </div>
+                              </div>
+                            {% endfor %}
+                          {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
+
+  <section class="engine"><a href="https://mobirise.info/k">develop free website</a></section>
+  <script src="{{url_for('static', filename='web/assets/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='popper/popper.min.js')}}"></script>
+  <script src="{{url_for('static', filename='tether/tether.min.js')}}"></script>
+  <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='smoothscroll/smooth-scroll.js')}}"></script>
+  <script src="{{url_for('static', filename='theme/js/script.js')}}"></script>
+  
+</body>
+  {% endblock %}
+</html>
