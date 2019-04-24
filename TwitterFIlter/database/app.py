@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os 
+import tweepy
 from sqlalchemy import update
 
 # import requests
